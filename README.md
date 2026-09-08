@@ -1,1 +1,0 @@
-# roboshop-dev-eks-infra

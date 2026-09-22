@@ -5,6 +5,9 @@ resource "aws_eks_access_entry" "bastion" {
 }
 
 resource "aws_eks_access_policy_association" "bastion" {
+  depends_on=[
+    aws_eks_access_entry.bastion
+  ]
   cluster_name  = local.eks_cluster_name
   policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSClusterAdminPolicy"
   principal_arn = local.bastion_iam_role_arn
@@ -21,6 +24,9 @@ resource "aws_eks_access_entry" "runner" {
 }
 
 resource "aws_eks_access_policy_association" "runner" {
+  depends_on=[
+    aws_eks_access_entry.runner
+  ]
   cluster_name  = local.eks_cluster_name
   policy_arn    = "arn:aws:eks::aws:cluster-access-policy/AmazonEKSViewPolicy"
   principal_arn = local.runner_iam_role_arn

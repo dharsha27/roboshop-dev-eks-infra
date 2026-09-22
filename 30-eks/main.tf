@@ -74,7 +74,8 @@ module "eks" {
       kubernetes_version = var.green_version
       # Starting on 1.30, AL2023 is the default AMI type for EKS managed node groups
       ami_type       = "AL2023_x86_64_STANDARD"
-      instance_types = ["t3.small", "t3.medium", "m5.xlarge", "m4.xlarge"]
+      # instance_types = ["t3.small", "t3.medium", "m5.xlarge", "m4.xlarge"]
+      instance_types = ["t3.small"]
       capacity_type  = "SPOT"
 
       iam_role_additional_policies = {

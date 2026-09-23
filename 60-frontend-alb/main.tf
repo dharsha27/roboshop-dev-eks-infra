@@ -35,7 +35,7 @@ resource "aws_lb_listener" "https" {
 
 resource "aws_route53_record" "www" {
   zone_id = var.zone_id
-  name    = "*.daws90s.shop" # *.daws90s.shop
+  name    = "*.devopspractice.online" # *.daws90s.shop
   type    = "A"
 
   alias {

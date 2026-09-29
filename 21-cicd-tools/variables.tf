@@ -1,0 +1,27 @@
+variable "project" {
+    default = "roboshop"
+}
+
+variable "environment" {
+    default = "dev"
+}
+
+variable "zone_id" {
+    default = "Z02304293I0EIMA6V7PSK"
+}
+
+variable "domain_name" {
+    default = "devopspractice.online"
+}
+
+variable "sonar" {
+    default = false
+}
+
+variable "jenkins" {
+    default = false
+}
+
+variable "runner" {
+    default = true
+}
